@@ -579,7 +579,14 @@ footer::before {
 
 @media (max-width: 768px) {
     .navbar {
-        padding: 1rem 5%;
+        background: rgba(3, 5, 10, 0.4); /* More transparent */
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border-bottom: none; /* remove border to blend better */
+    }
+    
+    .nav-content {
+        padding: 0.8rem 5%; /* Smaller padding */
     }
     
     .hamburger {
