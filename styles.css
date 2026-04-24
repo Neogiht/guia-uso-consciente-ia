@@ -1,14 +1,14 @@
 :root {
-    --bg-color: #03050a;
-    --bg-surface: #0a0d17;
-    --text-primary: #e2e8f0;
+    --bg-color: #050608;
+    --bg-surface: #0e1117;
+    --text-primary: #f1f5f9;
     --text-secondary: #94a3b8;
-    --neon-cyan: #00f3ff;
-    --neon-purple: #bd00ff;
-    --neon-green: #00ff66;
-    --neon-red: #ff003c;
-    --glass-bg: rgba(10, 13, 23, 0.7);
-    --glass-border: rgba(0, 243, 255, 0.1);
+    --neon-cyan: #38bdf8;
+    --neon-purple: #818cf8;
+    --neon-green: #34d399;
+    --neon-red: #fb7185;
+    --glass-bg: rgba(14, 17, 23, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.08);
 }
 
 * {
@@ -40,7 +40,7 @@ h1, h2, h3, .logo, .card-number, .cyber-button {
     width: 100vw;
     height: 100vh;
     z-index: -1;
-    background: radial-gradient(circle at center, #0a0d17 0%, #03050a 100%);
+    background: radial-gradient(circle at center, #0e1117 0%, #050608 100%);
 }
 
 /* Custom Cursor */
@@ -48,9 +48,9 @@ h1, h2, h3, .logo, .card-number, .cyber-button {
     position: fixed;
     top: 0;
     left: 0;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(0,243,255,0.15) 0%, rgba(189,0,255,0.05) 30%, transparent 70%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(129, 140, 248, 0.08) 0%, rgba(56, 189, 248, 0.03) 30%, transparent 70%);
     border-radius: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
@@ -69,9 +69,9 @@ h1, h2, h3, .logo, .card-number, .cyber-button {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(3, 5, 10, 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(5, 6, 8, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--glass-border);
     z-index: 100;
 }
@@ -91,7 +91,7 @@ h1, h2, h3, .logo, .card-number, .cyber-button {
 
 .logo span {
     color: var(--neon-cyan);
-    text-shadow: 0 0 10px var(--neon-cyan);
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
 }
 
 .nav-links {
@@ -111,8 +111,8 @@ h1, h2, h3, .logo, .card-number, .cyber-button {
 }
 
 .nav-links a:hover {
-    color: var(--neon-cyan);
-    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+    color: var(--text-primary);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
 /* Hero Section */
@@ -133,58 +133,60 @@ h1, h2, h3, .logo, .card-number, .cyber-button {
 .hero-badge {
     display: inline-block;
     padding: 0.5rem 1.5rem;
-    border: 1px solid var(--neon-purple);
+    border: 1px solid rgba(129, 140, 248, 0.4);
     color: var(--neon-purple);
     font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 3px;
     border-radius: 30px;
     margin-bottom: 2rem;
-    box-shadow: 0 0 15px rgba(189, 0, 255, 0.3);
     text-transform: uppercase;
+    background: rgba(129, 140, 248, 0.05);
 }
 
 .glitch {
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: 700;
     color: #fff;
     position: relative;
-    text-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
     margin-bottom: 2rem;
-    line-height: 1.1;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 .hero-quote {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--text-secondary);
     max-width: 800px;
     margin: 0 auto 3rem;
-    border-left: 4px solid var(--neon-cyan);
+    border-left: 3px solid var(--neon-cyan);
     padding-left: 2rem;
     text-align: left;
-    background: linear-gradient(90deg, rgba(0,243,255,0.05) 0%, transparent 100%);
+    background: linear-gradient(90deg, rgba(56, 189, 248, 0.05) 0%, transparent 100%);
     padding: 2rem;
+    border-radius: 0 10px 10px 0;
 }
 
 .cyber-button {
     display: inline-block;
     background: transparent;
-    color: var(--neon-cyan);
+    color: var(--text-primary);
     padding: 1.2rem 3rem;
     font-size: 1rem;
     text-decoration: none;
-    border: 1px solid var(--neon-cyan);
+    border: 1px solid var(--glass-border);
     position: relative;
     overflow: hidden;
-    transition: 0.3s;
-    box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+    transition: 0.4s;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
 }
 
 .cyber-button::before {
     content: '';
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: var(--neon-cyan);
+    background: rgba(255, 255, 255, 0.1);
     z-index: -1;
     transform: scaleX(0);
     transform-origin: right;
@@ -192,8 +194,7 @@ h1, h2, h3, .logo, .card-number, .cyber-button {
 }
 
 .cyber-button:hover {
-    color: var(--bg-color);
-    box-shadow: 0 0 30px rgba(0, 243, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .cyber-button:hover::before {
@@ -204,10 +205,11 @@ h1, h2, h3, .logo, .card-number, .cyber-button {
 .cyber-button .arrow {
     display: inline-block;
     transition: transform 0.3s;
+    color: var(--neon-cyan);
 }
 
 .cyber-button:hover .arrow {
-    transform: translateY(5px);
+    transform: translateY(4px);
 }
 
 /* Sections */
@@ -217,9 +219,9 @@ h1, h2, h3, .logo, .card-number, .cyber-button {
 }
 
 .alt-bg {
-    background: rgba(10, 13, 23, 0.5);
-    border-top: 1px solid rgba(255,255,255,0.02);
-    border-bottom: 1px solid rgba(255,255,255,0.02);
+    background: rgba(14, 17, 23, 0.3);
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
 }
 
 .section-title {
@@ -227,7 +229,6 @@ h1, h2, h3, .logo, .card-number, .cyber-button {
     text-align: center;
     margin-bottom: 4rem;
     color: #fff;
-    text-shadow: 0 0 15px rgba(255,255,255,0.3);
 }
 
 .left-align { text-align: left; }
@@ -246,37 +247,45 @@ h1, h2, h3, .logo, .card-number, .cyber-button {
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease;
+    border-radius: 8px;
 }
 
 .cyber-card::before {
     content: '';
     position: absolute;
     top: 0; left: 0; width: 2px; height: 100%;
-    background: linear-gradient(to bottom, var(--neon-cyan), transparent);
+    background: linear-gradient(to bottom, var(--neon-purple), transparent);
     opacity: 0;
     transition: opacity 0.4s;
 }
 
 .cyber-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 243, 255, 0.1);
-    border-color: rgba(0, 243, 255, 0.3);
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(20, 24, 33, 0.8);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .cyber-card:hover::before { opacity: 1; }
 
 .card-number {
     font-size: 4rem;
-    color: rgba(255,255,255,0.03);
+    color: rgba(255,255,255,0.04);
     position: absolute;
     top: 1rem; right: 1rem;
     line-height: 1;
     font-weight: 700;
 }
 
+.infinity-symbol {
+    font-size: 5rem;
+    top: 0.5rem;
+    font-family: 'Inter', sans-serif; /* Fallback for smooth infinity sign */
+}
+
 .cyber-card h3 {
     font-size: 1.1rem;
-    color: var(--neon-cyan);
+    color: var(--text-primary);
     margin-bottom: 1rem;
     position: relative;
     z-index: 1;
@@ -307,9 +316,10 @@ h1, h2, h3, .logo, .card-number, .cyber-button {
     margin: 2rem 0;
     padding: 1.5rem;
     border-left: 2px solid var(--neon-purple);
-    background: rgba(189, 0, 255, 0.05);
+    background: rgba(129, 140, 248, 0.05);
     font-style: italic;
     color: #fff;
+    border-radius: 0 8px 8px 0;
 }
 
 .stats-container {
@@ -319,21 +329,21 @@ h1, h2, h3, .logo, .card-number, .cyber-button {
 }
 
 .stat-box {
-    background: rgba(0, 243, 255, 0.05);
-    border: 1px solid rgba(0, 243, 255, 0.2);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .warning-box {
-    background: rgba(255, 0, 60, 0.05);
-    border: 1px solid rgba(255, 0, 60, 0.2);
+    background: rgba(251, 113, 133, 0.05);
+    border-color: rgba(251, 113, 133, 0.1);
 }
 
 .stat-box h4 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    color: var(--neon-cyan);
+    color: var(--text-primary);
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -362,21 +372,22 @@ h1, h2, h3, .logo, .card-number, .cyber-button {
 
 /* Security Panel */
 .security-panel {
-    background: linear-gradient(135deg, rgba(10, 13, 23, 0.9), rgba(3, 5, 10, 0.9));
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    background: var(--bg-surface);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     padding: 0;
     overflow: hidden;
 }
 
 .security-header {
-    background: rgba(255, 0, 60, 0.1);
+    background: rgba(251, 113, 133, 0.08);
     padding: 3rem;
     text-align: center;
-    border-bottom: 1px solid rgba(255, 0, 60, 0.3);
+    border-bottom: 1px solid rgba(251, 113, 133, 0.15);
 }
 
-.security-header h2 { color: var(--neon-red); margin-bottom: 1rem; }
+.security-header h2 { color: var(--text-primary); margin-bottom: 1rem; }
 
 .security-content {
     display: grid;
@@ -387,7 +398,7 @@ h1, h2, h3, .logo, .card-number, .cyber-button {
     padding: 3rem;
 }
 
-.danger-zone { border-right: 1px solid rgba(255,255,255,0.05); }
+.danger-zone { border-right: 1px solid var(--glass-border); }
 
 .danger-zone h3 { color: var(--neon-red); margin-bottom: 1.5rem; font-size: 1rem; }
 .safe-zone h3 { color: var(--neon-green); margin-bottom: 1.5rem; font-size: 1rem; }
@@ -412,15 +423,16 @@ h1, h2, h3, .logo, .card-number, .cyber-button {
 }
 
 .trap-card {
-    background: rgba(10, 13, 23, 0.6);
-    border: 1px dotted var(--text-secondary);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
     padding: 2rem;
     transition: 0.3s;
 }
 
 .trap-card:hover {
-    border-color: var(--neon-purple);
-    background: rgba(189, 0, 255, 0.05);
+    border-color: rgba(129, 140, 248, 0.3);
+    background: rgba(129, 140, 248, 0.03);
 }
 
 .trap-name {
@@ -439,7 +451,7 @@ h1, h2, h3, .logo, .card-number, .cyber-button {
 .trap-solution {
     color: var(--text-secondary);
     font-size: 0.9rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid var(--glass-border);
     padding-top: 1rem;
 }
 .trap-solution strong { color: var(--neon-green); }
@@ -448,7 +460,7 @@ h1, h2, h3, .logo, .card-number, .cyber-button {
 footer {
     padding: 5rem 0 3rem;
     text-align: center;
-    border-top: 1px solid rgba(0, 243, 255, 0.2);
+    border-top: 1px solid var(--glass-border);
     position: relative;
     overflow: hidden;
 }
@@ -458,9 +470,8 @@ footer::before {
     position: absolute;
     top: 0; left: 50%;
     transform: translateX(-50%);
-    width: 50%; height: 1px;
-    background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
-    box-shadow: 0 0 20px var(--neon-cyan);
+    width: 30%; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
 }
 
 .footer-title {
@@ -495,7 +506,7 @@ footer::before {
 /* Responsive */
 @media (max-width: 992px) {
     .grid-2-col, .security-content { grid-template-columns: 1fr; gap: 2rem; }
-    .danger-zone { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .danger-zone { border-right: none; border-bottom: 1px solid var(--glass-border); }
     .glitch { font-size: 3.5rem; }
 }
 
@@ -504,6 +515,7 @@ footer::before {
     .glitch { font-size: 2.5rem; }
     .hero-quote { font-size: 1.1rem; padding: 1.5rem; }
     .card-number { font-size: 3rem; }
+    .infinity-symbol { font-size: 4rem; }
     .section { padding: 4rem 0; }
     body { cursor: auto; } /* Disable custom cursor on mobile */
     .glow-cursor { display: none; }
