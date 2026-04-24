@@ -15,11 +15,10 @@ class Particle {
     constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 1.5;
-        this.speedX = (Math.random() * 0.6) - 0.3;
-        this.speedY = (Math.random() * 0.6) - 0.3;
-        // Softer, less neon colors
-        this.color = Math.random() > 0.5 ? 'rgba(56, 189, 248, 0.4)' : 'rgba(129, 140, 248, 0.4)';
+        this.size = Math.random() * 2;
+        this.speedX = (Math.random() * 0.8) - 0.4;
+        this.speedY = (Math.random() * 0.8) - 0.4;
+        this.color = Math.random() > 0.5 ? '#00f3ff' : '#bd00ff';
     }
     update() {
         this.x += this.speedX;
@@ -64,8 +63,7 @@ function drawConnections() {
                            ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
             if (distance < (canvas.width / 10) * (canvas.height / 10)) {
                 opacityValue = 1 - (distance / 20000);
-                // Subtle blue connection
-                ctx.strokeStyle = `rgba(56, 189, 248, ${opacityValue * 0.1})`;
+                ctx.strokeStyle = `rgba(0, 243, 255, ${opacityValue * 0.2})`;
                 ctx.lineWidth = 1;
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
