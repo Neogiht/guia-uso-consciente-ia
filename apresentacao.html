@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação | Fundamentação Teórica IA</title>
+    <link rel="stylesheet" href="apresentacao.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <div class="glow-cursor" id="glow-cursor"></div>
+
+    <div class="presentation-container">
+        <!-- Controles -->
+        <div class="controls">
+            <button id="prev-btn" class="cyber-btn">← ANTERIOR</button>
+            <div class="slide-counter"><span id="current-slide">1</span> / <span id="total-slides">7</span></div>
+            <button id="next-btn" class="cyber-btn">PRÓXIMO →</button>
+        </div>
+
+        <!-- Slide 1: Capa -->
+        <section class="slide active">
+            <div class="slide-content text-center">
+                <div class="hero-badge">Pesquisa Acadêmica UFABC</div>
+                <h1 class="glitch" data-text="FUNDAMENTAÇÃO TEÓRICA">FUNDAMENTAÇÃO TEÓRICA</h1>
+                <h2 class="subtitle">O Impacto Cognitivo da GenAI no Trabalho</h2>
+                <p class="hero-quote">
+                    Um mergulho profundo nas pesquisas sobre como a Inteligência Artificial afeta nosso pensamento crítico e autonomia intelectual.
+                </p>
+            </div>
+        </section>
+
+        <!-- Slide 2: O Cenário -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2 class="slide-title">1. O Cenário Atual</h2>
+                <div class="grid-2-col">
+                    <div>
+                        <p class="large-text">A GenAI tornou-se parte integrante de todas as rotinas profissionais. A narrativa comum foca apenas no <strong>ganho de produtividade</strong>.</p>
+                        <p class="large-text mt-2">Porém, pesquisas rigorosas da UFABC revelam um cenário complexo: o uso contínuo afeta nossa capacidade analítica e de julgamento.</p>
+                    </div>
+                    <div class="cyber-box">
+                        <h3 class="neon-purple-text">A Mudança de Paradigma</h3>
+                        <p>Diferente de calculadoras ou do Google, a GenAI não apenas busca informações, ela <strong>gera autonomamente</strong> processos que antes exigiam raciocínio humano.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Descarregamento Cognitivo -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2 class="slide-title">2. Descarregamento Cognitivo</h2>
+                <p class="large-text">O processo pelo qual tarefas mentais são delegadas a ferramentas externas para reduzir a carga cognitiva (Risko e Gilbert, 2016).</p>
+                
+                <blockquote class="neon-quote my-4">
+                    "A GenAI simula processos cognitivos complexos como análise, síntese e avaliação. Quanto mais delegamos o raciocínio, menos exercitamos nossa capacidade."<br>
+                    <span style="font-size: 0.8em; opacity: 0.7;">— Lee et al., 2025 (Microsoft Research) e Gerlich (2025)</span>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- Slide 4: Taxonomia de Bloom -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2 class="slide-title">3. Pensamento Crítico em Risco</h2>
+                <p class="mb-4">Como o uso passivo da IA afeta os níveis da <strong>Taxonomia de Bloom</strong>:</p>
+                
+                <div class="bloom-grid">
+                    <div class="bloom-card risk-medium">
+                        <h4>1. Conhecimento</h4>
+                        <p>Lembrar informações</p>
+                        <div class="risk-badge">Risco: MÉDIO</div>
+                    </div>
+                    <div class="bloom-card risk-high">
+                        <h4>2. Compreensão</h4>
+                        <p>Interpretar conceitos</p>
+                        <div class="risk-badge">Risco: ALTO</div>
+                    </div>
+                    <div class="bloom-card risk-medium">
+                        <h4>3. Aplicação</h4>
+                        <p>Usar em situações reais</p>
+                        <div class="risk-badge">Risco: MÉDIO</div>
+                    </div>
+                    <div class="bloom-card risk-high">
+                        <h4>4. Análise</h4>
+                        <p>Decompor um todo</p>
+                        <div class="risk-badge">Risco: ALTO</div>
+                    </div>
+                    <div class="bloom-card risk-high">
+                        <h4>5. Síntese</h4>
+                        <p>Criar algo novo</p>
+                        <div class="risk-badge">Risco: ALTO</div>
+                    </div>
+                    <div class="bloom-card risk-critical">
+                        <h4>6. Avaliação</h4>
+                        <p>Julgar qualidade/relevância</p>
+                        <div class="risk-badge blink">Risco: MUITO ALTO</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Benefícios vs Riscos -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2 class="slide-title">4. A Balança do Uso</h2>
+                <div class="grid-2-col">
+                    <div class="stat-box">
+                        <h3 class="neon-cyan-text">📈 Benefícios</h3>
+                        <ul class="cyber-list">
+                            <li>Aumento drástico de produtividade</li>
+                            <li>Redução de tempo no operacional</li>
+                            <li>Acesso imediato a sínteses</li>
+                            <li>Apoio forte à ideação criativa</li>
+                        </ul>
+                    </div>
+                    <div class="stat-box warning-box">
+                        <h3 class="neon-red-text">⚠ Riscos (O Lado Oculto)</h3>
+                        <ul class="cyber-list">
+                            <li>Redução do engajamento reflexivo</li>
+                            <li>Formação de dependência tecnológica</li>
+                            <li>Diminuição da análise autônoma</li>
+                            <li>Enfraquecimento da confiança pessoal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Perfis de Uso -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2 class="slide-title">5. Os 3 Perfis de Usuário</h2>
+                <div class="profiles-grid">
+                    <div class="profile-card">
+                        <div class="profile-icon neon-red-text">!</div>
+                        <h3>Passivo</h3>
+                        <p>Usa IA como oráculo. Não questiona nem verifica fatos. Maior risco de atrofia cognitiva e dependência severa.</p>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-icon neon-purple-text">~</div>
+                        <h3>Colaborativo</h3>
+                        <p>Usa IA como ponto de partida. Verifica fontes e adiciona próprio julgamento. Mantém habilidades estabilizadas.</p>
+                    </div>
+                    <div class="profile-card active-profile">
+                        <div class="profile-icon neon-cyan-text">✓</div>
+                        <h3>Crítico</h3>
+                        <p>Usa IA como ferramenta. Questiona ativamente os outputs. Exercita análise pura. <strong>O modelo ideal das pesquisas.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Fechamento -->
+        <section class="slide">
+            <div class="slide-content text-center">
+                <h1 class="glitch" data-text="O OBJETIVO FINAL">O OBJETIVO FINAL</h1>
+                <p class="hero-quote mt-4">
+                    A tecnologia avança, mas o fator humano diferencial continuará sendo o pensamento crítico. Escolha ser o usuário que domina a ferramenta, não o que é moldado por ela.
+                </p>
+                <div class="mt-4">
+                    <a href="index.html" class="cyber-button">
+                        VOLTAR AO GUIA PRINCIPAL
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="apresentacao.js"></script>
+</body>
+</html>
