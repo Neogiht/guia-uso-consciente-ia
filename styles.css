@@ -548,11 +548,37 @@ footer::before {
 }
 
 @media (max-width: 768px) {
-    .nav-links { display: none; }
-    .glitch { font-size: 2.5rem; }
+    .navbar {
+        padding: 1rem 5%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .nav-links {
+        display: flex;
+        overflow-x: auto;
+        width: 100%;
+        padding-bottom: 0.5rem;
+        -webkit-overflow-scrolling: touch;
+        gap: 1.5rem;
+        justify-content: flex-start;
+    }
+    .glitch { font-size: clamp(2rem, 8vw, 3.5rem); }
     .hero-quote { font-size: 1.1rem; padding: 1.5rem; }
     .card-number { font-size: 3rem; }
     .section { padding: 4rem 0; }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 1rem;
+    }
+    .cyber-button { width: 100%; text-align: center; }
+    
+    .section-title { font-size: 1.8rem; margin-bottom: 2rem; }
+    .principles-grid { grid-template-columns: 1fr; }
+    .traps-grid { grid-template-columns: 1fr; }
+    
     body { cursor: auto; } /* Disable custom cursor on mobile */
     .glow-cursor { display: none; }
 }
