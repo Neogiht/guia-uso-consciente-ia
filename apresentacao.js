@@ -52,6 +52,37 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+// Touch Navigation
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+document.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    const SWIPE_THRESHOLD = 50;
+    if (touchEndX < touchStartX - SWIPE_THRESHOLD) {
+        // Swipe Left -> Next
+        if (currentSlide < slides.length - 1) {
+            currentSlide++;
+            updateSlides();
+        }
+    }
+    if (touchEndX > touchStartX + SWIPE_THRESHOLD) {
+        // Swipe Right -> Prev
+        if (currentSlide > 0) {
+            currentSlide--;
+            updateSlides();
+        }
+    }
+}
+
 updateSlides();
 
 // Particle Canvas Animation
