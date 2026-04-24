@@ -492,6 +492,54 @@ footer::before {
 .delay-3 { transition-delay: 0.3s; }
 .delay-4 { transition-delay: 0.4s; }
 
+/* Additions for Presentation Integration */
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.secondary-btn {
+    border-color: var(--neon-purple);
+    color: var(--neon-purple);
+    box-shadow: 0 0 15px rgba(189, 0, 255, 0.2);
+}
+
+.secondary-btn::before {
+    background: var(--neon-purple);
+}
+
+.secondary-btn:hover {
+    color: var(--bg-color);
+    box-shadow: 0 0 30px rgba(189, 0, 255, 0.6);
+}
+
+.highlight-link {
+    color: var(--neon-purple) !important;
+}
+
+.highlight-link:hover {
+    color: #fff !important;
+    text-shadow: 0 0 10px var(--neon-purple) !important;
+}
+
+.research-cta {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px dashed rgba(0, 243, 255, 0.2);
+}
+
+.research-cta p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.mt-4 { margin-top: 2rem; }
+
 /* Responsive */
 @media (max-width: 992px) {
     .grid-2-col, .security-content { grid-template-columns: 1fr; gap: 2rem; }
