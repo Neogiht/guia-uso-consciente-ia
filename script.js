@@ -139,3 +139,24 @@ if (hamburger && navLinks) {
         });
     });
 }
+
+// Sobre Modal Logic
+const modalSobre = document.getElementById('sobre-modal');
+const btnSobre = document.getElementById('sobre-btn');
+const closeBtnSobre = document.querySelector('#sobre-modal .close-modal');
+
+if (btnSobre && modalSobre && closeBtnSobre) {
+    btnSobre.addEventListener('click', () => {
+        modalSobre.classList.add('show');
+    });
+
+    closeBtnSobre.addEventListener('click', () => {
+        modalSobre.classList.remove('show');
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modalSobre) {
+            modalSobre.classList.remove('show');
+        }
+    });
+}
